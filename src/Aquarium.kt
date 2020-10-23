@@ -1,3 +1,4 @@
+import java.util.*
 import kotlin.math.pow
 
 fun operators(){
@@ -123,9 +124,21 @@ fun arrays(){
     for (i in 'a'..'g') print(i)
     for (i in 1..5) print(i)
     for (i in 5 downTo 1) print(i)
-    for (i in 1..10 step 2) print(1)
+    for (i in 1..10 step 2) print(i)
 
 }
-fun main(){
-    operators()
+fun dayOfWeek():String{
+    return Calendar.getInstance().get(Calendar.DAY_OF_WEEK).toString()
 }
+
+fun expressions(){
+    val temp = 10
+    val isHot  = if (temp>50) true else false
+    print(isHot)
+    val message = "You are ${if(temp>50) "fried" else "safe"} fish"
+    print(message)
+}
+fun main(args: Array<String>){
+    print("Good ${if (args[0].toInt()>12) "night" else "morning"} Kotlin")
+}
+    
